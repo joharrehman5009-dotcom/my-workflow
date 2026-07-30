@@ -1,0 +1,25 @@
+{
+  "label": "base",
+  "files": [
+    {
+      "rel": "out\\index.html",
+      "size": 257134
+    },
+    {
+      "rel": "out\\assets\\cdn.prod.website-files.com\\691d7c9f14d0280ebe2d4108\\6926f8e053a878c5f61cc622_nenad_edit-photo_final 1.avif",
+      "size": 32489
+    },
+    {
+      "rel": "out\\assets\\cdn.prod.website-files.com\\691d7c9f14d0280ebe2d4108\\6926f8e053a878c5f61cc622_nenad_edit-photo_final 1-p-500.avif",
+      "size": 16266
+    },
+    {
+      "rel": "rename.js",
+      "size": 3594
+    },
+    {
+      "rel": "localize.js",
+      "size": 4979
+    }
+  ]
+}

@@ -1,0 +1,278 @@
+{
+  "_note": "Johar Rehman's real content, rewritten to fit each slot. Facts only, no invented metrics. Edit copy here; never in out/index.html (that file is regenerated). No em dashes.",
+  "meta": {
+    "title": "Johar Rehman | Performance Growth Marketer & SEO Specialist",
+    "description": "Performance growth marketer specialising in SEO, Google Ads, Meta Ads and conversion optimisation. I help businesses rank, grow qualified traffic, and turn visitors into customers.",
+    "email": "joharrehman56427@gmail.com",
+    "linkedin": "https://www.linkedin.com/in/johar-rehman",
+    "whatsapp": "https://wa.me/923320423783"
+  },
+  "hero": {
+    "leftText": "The SEO & Growth Guy. That's Johar.",
+    "heading": "Search, Applied Differently.",
+    "rightText": "Working alongside your team on SEO, paid media and conversion optimisation, treated as one system and measured against revenue rather than rankings alone.",
+    "projectsStat": "30+Websites",
+    "experienceStat": "3+",
+    "experienceLabel": "Years of experience",
+    "tags": [
+      "Analytical",
+      "Reliable",
+      "Strategist",
+      "Optimiser",
+      "Accountable"
+    ],
+    "buttons": [
+      "Book a Call",
+      "About Me"
+    ],
+    "sidebarBio": "Working with your team on SEO, paid media and conversion optimisation, measured against revenue not rankings."
+  },
+  "about": {
+    "heading": "About Me (&) My Journey",
+    "intro": "I got into SEO wanting to know why some sites grow without ad spend while others stay invisible. Three years and 30+ websites later, I am still chasing that answer.",
+    "cards": [
+      {
+        "year": "'22",
+        "heading": "Where the questions started",
+        "short": "BBA Marketing at IMSciences, Peshawar. The degree gave me the framework; search gave me the obsession.",
+        "handle": "@imsciences",
+        "long": "I studied BBA Marketing at IMSciences in Peshawar. Somewhere between coursework and curiosity I started asking why some websites pull traffic for free while others pay for every visitor and still stay invisible.",
+        "logo": "imsciences"
+      },
+      {
+        "year": "'22",
+        "heading": "Measuring what people trust",
+        "short": "Final year research on consumer trust in e-commerce and how perceived risk shapes what people actually buy.",
+        "handle": "@research",
+        "long": "My final year research looked at consumer trust in e-commerce and its effect on online purchasing behaviour, using the PROCESS macro and a Sobel test to measure perceived risk as a mediating variable. The same quantitative thinking still shapes how I read conversion behaviour and SEO performance.",
+        "logo": "imsciences"
+      },
+      {
+        "year": "'23",
+        "heading": "First real audits",
+        "short": "Learning that most sites are not held back by content. They are held back by things nobody has looked at.",
+        "handle": "@seo",
+        "long": "Early audit work taught me the pattern that still holds: most websites are not underperforming because the writing is weak. They are underperforming because crawl paths are broken, titles are duplicated, and nobody has checked in months.",
+        "logo": "unitedsol"
+      },
+      {
+        "year": "'24",
+        "heading": "Technical foundations",
+        "short": "Crawl budgets, redirect chains, schema, indexation. The unglamorous work that decides everything else.",
+        "handle": "@technical",
+        "long": "I went deep on technical SEO because it is where the compounding happens. Speed issues, redirect chains and indexation gaps quietly cost rankings every single week, and none of it shows up in a content calendar.",
+        "logo": "unitedsol"
+      },
+      {
+        "year": "'25",
+        "heading": "Seven sites at once",
+        "short": "Google Ads & SEO Executive at DX Creativ. Seven live client sites, every one at a different stage.",
+        "handle": "@dxcreativ",
+        "long": "At DX Creativ I managed full SEO across seven live client websites simultaneously, spanning technical audits, on-page fixes, content strategy and link-building oversight, while running Google Ads search campaigns for lead generation alongside it.",
+        "logo": "unitedsol"
+      },
+      {
+        "year": "'26",
+        "heading": "Paid and organic as one system",
+        "short": "Performance Growth Marketer at Remote Opus. Ads and SEO stopped being two separate jobs.",
+        "handle": "@remoteopus",
+        "long": "At Remote Opus I run performance marketing end to end: Google and Meta Ads, SEO, landing pages, and conversion tracking. Seeing which keywords convert in paid is the fastest way to sharpen the organic strategy, so I stopped treating them as separate disciplines.",
+        "logo": "remote-opus"
+      },
+      {
+        "year": "'26",
+        "heading": "The work continues",
+        "short": "Still auditing what is broken, fixing what matters most, and building around what buyers already search for.",
+        "handle": "@johar",
+        "long": "The approach has not changed: audit what is broken, fix what matters most, and build content and campaigns around what buyers are already searching for. Not templates, not guesswork.",
+        "logo": "remote-opus"
+      }
+    ]
+  },
+  "projects": {
+    "heading": "Built for Search,Made to Convert",
+    "intro": "Three years across e-commerce, travel, B2B services and agency portfolios. Below are real projects with real numbers, plus the work I do most often.",
+    "cards": [
+      {
+        "name": "E-Commerce SEO",
+        "text": "Hundreds of indexed pages and almost no organic traffic. A full crawl surfaced 200+ issues; 14 keywords moved to page 1 within 4 months."
+      },
+      {
+        "name": "PAK Tour Guide",
+        "text": "Launched with no domain authority and zero local visibility. Destination landing pages and a fully optimised Business Profile took it from zero to 1,000 monthly organics in 5 months."
+      },
+      {
+        "name": "Agency Portfolio",
+        "text": "Seven live client websites managed at once, each at a different maturity stage, averaging 38% traffic growth across the portfolio."
+      },
+      {
+        "name": "Technical SEO",
+        "text": "Crawl paths, redirect chains, indexation gaps and page speed. The issues that silently suppress rankings before content ever gets a chance."
+      },
+      {
+        "name": "On-Page SEO",
+        "text": "Keyword placement, heading structure, content depth and internal linking. The details that separate position 8 from position 2."
+      },
+      {
+        "name": "Keyword Research",
+        "text": "Finding what buyers actually search rather than what sounds right internally. Ranking for the wrong terms wastes months."
+      },
+      {
+        "name": "Google Ads",
+        "text": "Search campaigns for lead generation, with ongoing optimisation of keywords, bids and ad copy to bring cost per conversion down."
+      },
+      {
+        "name": "Meta Ads",
+        "text": "Audience targeting, budget allocation and bid optimisation managed end to end, aimed at cost per acquisition rather than reach."
+      },
+      {
+        "name": "Local SEO",
+        "text": "Google Business Profile optimisation, local pack visibility and the service pages that turn nearby searches into enquiries."
+      }
+    ]
+  },
+  "overview": {
+    "heading": "What You Get?",
+    "intro": "Technical fixes, search strategy and paid media working as one system, pointed at qualified traffic and leads rather than vanity metrics.",
+    "cards": [
+      {
+        "heading": "SEO Audits",
+        "text": "A full crawl and a prioritised list of what is actually blocking rankings, ordered by impact rather than by how easy it is to fix."
+      },
+      {
+        "heading": "Technical SEO",
+        "text": "Crawl paths, redirect chains, schema and indexation resolved so search engines can properly reach and understand every page."
+      },
+      {
+        "heading": "Content & On-Page",
+        "text": "Keyword strategy, heading structure, content depth and internal linking built around real search intent."
+      },
+      {
+        "heading": "Paid Media",
+        "text": "Google and Meta Ads managed end to end, from targeting and budget to bids and ad copy, optimised toward cost per acquisition."
+      },
+      {
+        "heading": "Conversion Optimisation",
+        "text": "Tracking set up correctly, then the full funnel tuned so the traffic you already have turns into enquiries."
+      }
+    ]
+  },
+  "services": {
+    "heading": "Ways We Can Work",
+    "intro": "Same process and same attention either way. The difference is scope and how much of it you need right now.",
+    "cards": [
+      {
+        "heading": "Monthly Retainer",
+        "price": "Retainer",
+        "unit": "/ ongoing",
+        "text": "Ongoing SEO and paid media ownership. Technical fixes, content strategy and campaign management handled continuously.",
+        "items": [
+          "Technical SEO monitoring and fixes",
+          "Content strategy and on-page execution",
+          "Google and Meta Ads management",
+          "Conversion tracking and reporting",
+          "Monthly performance review"
+        ],
+        "footer": "For businesses that need compounding growth rather than a one-off push."
+      },
+      {
+        "heading": "SEO Audit",
+        "price": "Audit",
+        "unit": "",
+        "text": "A full technical and on-page audit with a prioritised action plan. You get the findings whether or not we work together afterwards.",
+        "items": [
+          "Full site crawl and issue log",
+          "Technical, on-page and content review",
+          "Keyword and competitor gap analysis",
+          "Prioritised fix list ordered by impact",
+          "Walkthrough call to talk it through"
+        ],
+        "footer": "For sites that are underperforming without an obvious reason."
+      },
+      {
+        "heading": "Project Work",
+        "price": "Book a Call",
+        "unit": "",
+        "text": "Scoped engagements: a migration, a launch, a rebuild, or an SEO foundation set before development starts rather than patched in after.",
+        "items": [
+          "SEO requirements defined before build",
+          "Migration and launch planning",
+          "Schema implementation across page types",
+          "Local SEO and Business Profile setup",
+          "Handover documentation"
+        ],
+        "footer": "For a defined piece of work with a clear finish line."
+      }
+    ]
+  },
+  "testimonial": {
+    "heading": "From People I've Worked With",
+    "items": [
+      {
+        "title": "Found what we had been ignoring.",
+        "quote": "Johar audited our website and found issues we had been ignoring for months. He explained what mattered, fixed it, and our Search Console impressions were up significantly within 6 weeks. Straightforward and reliable.",
+        "name": "Ahmed K.",
+        "role": "B2B Services Company, Pakistan"
+      },
+      {
+        "title": "Focused on what moves numbers.",
+        "quote": "We brought Johar in for Google Ads and on-page SEO at the same time. Cost per lead dropped around 30% in the first month and three service pages hit page 1 within 8 weeks. He focuses on what moves numbers, not on looking busy.",
+        "name": "Sara M.",
+        "role": "E-commerce Brand, UAE"
+      },
+      {
+        "title": "Understood how people search.",
+        "quote": "We had no organic presence when we started. Johar built the content plan, handled the Google Business Profile, and we got our first organic enquiries within about 3 months. He understands how people search in this space, which made a real difference.",
+        "name": "Raza H.",
+        "role": "Tour Operator, Pakistan"
+      }
+    ]
+  },
+  "faq": {
+    "heading": "Got any questions?",
+    "items": [
+      {
+        "q": "How long before I see results?",
+        "a": "Technical fixes can show movement in weeks; content and authority take months. Most projects show measurable change in Search Console within 6 to 12 weeks, with the larger gains compounding after that. Anyone promising page 1 in 30 days is selling something."
+      },
+      {
+        "q": "Do you work on paid ads as well as SEO?",
+        "a": "Yes, and I prefer to run them together. Paid data tells you which keywords actually convert, which makes the organic strategy far sharper. Treating them as two separate jobs wastes the most useful signal you have."
+      },
+      {
+        "q": "What does an SEO audit actually cover?",
+        "a": "A full crawl of the site, then technical, on-page and content review, plus keyword and competitor gap analysis. You get a prioritised fix list ordered by impact rather than by ease, and a call to walk through it."
+      },
+      {
+        "q": "Can you work with my existing site?",
+        "a": "That is most of what I do. Whether it needs a technical cleanup, a content structure, schema, or a full migration handled without losing rankings, I can step into an existing build rather than starting over."
+      },
+      {
+        "q": "Which platforms have you worked with?",
+        "a": "WordPress, Shopify, Magento and Strapi among others, across e-commerce, travel, B2B services and agency portfolios. The platform changes what is easy; it rarely changes what actually needs fixing."
+      },
+      {
+        "q": "Do you handle local SEO?",
+        "a": "Yes. Google Business Profile optimisation, local pack visibility, and the service and location pages that turn nearby searches into enquiries. It is often the fastest win for service businesses."
+      },
+      {
+        "q": "How do you report on progress?",
+        "a": "Search Console and analytics data rather than screenshots of rankings. You see impressions, clicks, positions and conversions, plus what changed and what it moved. If something is not working I will tell you."
+      },
+      {
+        "q": "Not sure what your site needs?",
+        "a": "Reach out and describe the situation. Most audits and strategy calls start within 48 hours, and you will get an honest read on what is holding the site back, with no sales pitch attached."
+      }
+    ]
+  },
+  "marquee": [
+    "SEO",
+    "GOOGLE ADS",
+    "META ADS",
+    "TECHNICAL SEO",
+    "LOCAL SEO",
+    "ON-PAGE SEO",
+    "ANALYTICS",
+    "CONTENT"
+  ]
+}
