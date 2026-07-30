@@ -214,10 +214,17 @@ if (cards.length) {
     const c = C.projects.cards[i];
     if (!c) return;
     writeInto(e, c.name);
-    const body = $(e).closest('.work-card').find('.op80').first();
+    const workCard = $(e).closest('.work-card');
+    const body = workCard.find('.op80').first();
     if (body.length) writeInto(body.get(0), c.text);
+    // .work-label holds the card number followed by 2-3 stack tags. The tags were
+    // still the original site's toolkit (GSAP, CMS, API, Components, Webflow).
+    // The leading number is part of the design and is left alone.
+    const labels = workCard.find('.work-label').toArray()
+      .filter((el) => !/^\d+$/.test($(el).text().trim()));
+    labels.forEach((el, k) => { if (c.tags && c.tags[k]) writeInto(el, c.tags[k]); });
   });
-  hit(`project cards (${cards.length})`);
+  hit(`project cards (${cards.length}) + stack tags`);
 } else miss('project cards');
 
 // ---------- overview ----------
@@ -244,14 +251,47 @@ svc.each((i, e) => {
   const c = C.services.cards[i];
   if (!c) return;
   writeInto(e, c.heading);
+  // The three cards do NOT share a shape. Only the first has a "/ 30hours" unit
+  // line, and the second carries six feature lines where the others carry five.
+  // A fixed index map left the original Webflow blurb sitting in the slot that
+  // an empty unit skipped, so the shape is detected from the markup instead.
   const card = $(e).closest('.service-card');
-  card.find('p').each((j, p) => {
-    const t = $(p).text().trim();
-    if (/^\$/.test(t) || t === 'Book a Call') writeInto(p, c.price);
-    else if (/^\/\s*\d*\s*hours?$/i.test(t) && c.unit) writeInto(p, c.unit);
-  });
+  const ps = card.find('p').toArray();
+  const hasUnit = ps.length > 1 && /^\/\s*\d/.test($(ps[1]).text().trim());
+  const itemCount = ps.length - (hasUnit ? 1 : 0) - 3; // price, description, footer
+  const items = (c.items || []).slice(0, itemCount);
+  const seq = hasUnit
+    ? [c.price, c.unit, c.text, ...items, c.footer]
+    : [c.price, c.text, ...items, c.footer];
+  if (items.length < itemCount) {
+    console.warn(`    !! card "${c.heading}" needs ${itemCount} feature lines, content.json has ${(c.items || []).length}`);
+  }
+  ps.forEach((p, j) => { if (seq[j] !== undefined && seq[j] !== '') writeInto(p, seq[j]); });
+  console.log(`    "${c.heading}": ${ps.length} <p>, unit=${hasUnit}, ${itemCount} features, mapped ${seq.length}`);
 });
 if (svc.length) hit(`service cards (${svc.length})`); else miss('service cards');
+
+// ---------- CTA ----------
+// This block was never targeted. Its body uses .max-width-389, the same class as
+// the about and services intros, but my selectors were scoped to those sections
+// so the CTA kept the original copy.
+const cta = $('.cta_section');
+if (cta.length && C.cta) {
+  setText('.cta_heading', C.cta.heading, 'cta heading (br preserved)', cta);
+  const body = cta.find('.max-width-389').first();
+  if (body.length) writeInto(body.get(0), C.cta.text);
+  const prompt = cta.find('.cta-text').first();
+  if (prompt.length && C.cta.prompt) writeInto(prompt.get(0), C.cta.prompt);
+  const btn = cta.find('.button-text').first();
+  if (btn.length && C.cta.button) writeInto(btn.get(0), C.cta.button);
+  // Same stranger's headshot that was removed from the about cards.
+  const img = cta.find('.cta_img').first();
+  if (img.length) {
+    img.attr('src', 'assets/local-logos/johar-dp-circle-light.png')
+      .attr('alt', 'Johar Rehman').removeAttr('srcset').removeAttr('sizes');
+  }
+  hit('cta section (heading, body, prompt, button, avatar)');
+} else miss('cta section');
 
 // ---------- testimonials ----------
 // All 8 slides are KEPT. Removing five previously deleted 223 elements' worth of

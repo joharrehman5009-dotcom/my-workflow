@@ -95,39 +95,83 @@
     "cards": [
       {
         "name": "E-Commerce SEO",
-        "text": "Hundreds of indexed pages and almost no organic traffic. A full crawl surfaced over 200 issues. Fourteen keywords reached page one inside four months."
+        "text": "Hundreds of indexed pages and almost no organic traffic. A full crawl surfaced over 200 issues. Fourteen keywords reached page one inside four months.",
+        "tags": [
+          "Screaming Frog",
+          "Schema",
+          "GSC"
+        ]
       },
       {
         "name": "PAK Tour Guide",
-        "text": "Launched with no authority and no local visibility at all. Destination pages and a properly built Business Profile took it from zero to 1,000 monthly organics in five months."
+        "text": "Launched with no authority and no local visibility at all. Destination pages and a properly built Business Profile took it from zero to 1,000 monthly organics in five months.",
+        "tags": [
+          "Local SEO",
+          "Content",
+          "GBP"
+        ]
       },
       {
         "name": "Agency Portfolio",
-        "text": "Seven client sites managed at once, each at a different stage. Traffic grew 38% on average across the portfolio."
+        "text": "Seven client sites managed at once, each at a different stage. Traffic grew 38% on average across the portfolio.",
+        "tags": [
+          "Audits",
+          "On-Page",
+          "Reporting"
+        ]
       },
       {
         "name": "Technical SEO",
-        "text": "Crawl paths, redirect chains, indexation gaps, page speed. The problems that quietly suppress rankings long before content gets a fair test."
+        "text": "Crawl paths, redirect chains, indexation gaps, page speed. The problems that quietly suppress rankings long before content gets a fair test.",
+        "tags": [
+          "Crawl",
+          "Indexation",
+          "Speed"
+        ]
       },
       {
         "name": "On-Page SEO",
-        "text": "Keyword placement, heading structure, depth, internal linking. Small things on their own. Together they are the gap between position eight and position two."
+        "text": "Keyword placement, heading structure, depth, internal linking. Small things on their own. Together they are the gap between position eight and position two.",
+        "tags": [
+          "Keywords",
+          "Structure",
+          "Internal Links"
+        ]
       },
       {
         "name": "Keyword Research",
-        "text": "What buyers actually type, not what sounds right in a meeting. Ranking for the wrong phrase costs you months and teaches you nothing."
+        "text": "What buyers actually type, not what sounds right in a meeting. Ranking for the wrong phrase costs you months and teaches you nothing.",
+        "tags": [
+          "Ahrefs",
+          "Intent"
+        ]
       },
       {
         "name": "Google Ads",
-        "text": "Search campaigns built for leads, then tightened continuously on keywords, bids and copy until cost per conversion comes down and stays down."
+        "text": "Search campaigns built for leads, then tightened continuously on keywords, bids and copy until cost per conversion comes down and stays down.",
+        "tags": [
+          "Search",
+          "Bidding",
+          "Tracking"
+        ]
       },
       {
         "name": "Meta Ads",
-        "text": "Targeting, budget and bids managed end to end, judged on cost per acquisition rather than reach or impressions."
+        "text": "Targeting, budget and bids managed end to end, judged on cost per acquisition rather than reach or impressions.",
+        "tags": [
+          "Targeting",
+          "Budget",
+          "CPA"
+        ]
       },
       {
         "name": "Local SEO",
-        "text": "Business Profile optimisation, local pack visibility, and the service pages that turn a nearby search into a phone call."
+        "text": "Business Profile optimisation, local pack visibility, and the service pages that turn a nearby search into a phone call.",
+        "tags": [
+          "GBP",
+          "Local Pack",
+          "Reviews"
+        ]
       }
     ]
   },
@@ -184,6 +228,7 @@
           "Full crawl and issue log",
           "Technical, on-page and content review",
           "Keyword and competitor gap analysis",
+          "Site speed and Core Web Vitals check",
           "Fix list ordered by impact",
           "A call to walk through it properly"
         ],
@@ -274,5 +319,11 @@
     "ON-PAGE SEO",
     "ANALYTICS",
     "CONTENT"
-  ]
+  ],
+  "cta": {
+    "heading": "Let's Find What Is Holding Your Site Back",
+    "text": "Every site has room to grow. You get a clear read on what is working, what is quietly costing you traffic, and the order worth fixing it in.",
+    "prompt": "Have something in mind?",
+    "button": "Let's Talk"
+  }
 }
