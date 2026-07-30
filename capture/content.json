@@ -1,16 +1,16 @@
 {
-  "_note": "Johar Rehman's real content, rewritten to fit each slot. Facts only, no invented metrics. Edit copy here; never in out/index.html (that file is regenerated). No em dashes.",
+  "_note": "Johar Rehman's content. Facts only, no invented metrics. Edit copy HERE, never in out/index.html (that file is regenerated on every build). No em dashes. sidebarBio must stay under 122 chars or the nav buttons clip.",
   "meta": {
-    "title": "Johar Rehman | Performance Growth Marketer & SEO Specialist",
-    "description": "Performance growth marketer specialising in SEO, Google Ads, Meta Ads and conversion optimisation. I help businesses rank, grow qualified traffic, and turn visitors into customers.",
+    "title": "Johar Rehman | SEO & Performance Marketing",
+    "description": "SEO and performance marketing for businesses that need traffic to turn into revenue. Technical audits, search strategy, Google and Meta Ads, and the conversion work in between.",
     "email": "joharrehman56427@gmail.com",
     "linkedin": "https://www.linkedin.com/in/johar-rehman",
     "whatsapp": "https://wa.me/923320423783"
   },
   "hero": {
-    "leftText": "The SEO & Growth Guy. That's Johar.",
-    "heading": "Search, Applied Differently.",
-    "rightText": "Working alongside your team on SEO, paid media and conversion optimisation, treated as one system and measured against revenue rather than rankings alone.",
+    "leftText": "The search and growth guy. That's Johar.",
+    "heading": "Search That Pays For Itself.",
+    "rightText": "I work alongside your team on SEO, paid search and the conversion gaps in between. One system, measured against revenue rather than a rankings screenshot.",
     "projectsStat": "30+Websites",
     "experienceStat": "3+",
     "experienceLabel": "Years of experience",
@@ -25,183 +25,183 @@
       "Book a Call",
       "About Me"
     ],
-    "sidebarBio": "Working with your team on SEO, paid media and conversion optimisation, measured against revenue not rankings."
+    "sidebarBio": "SEO, paid search and conversion work as one system, measured against revenue rather than rankings."
   },
   "about": {
     "heading": "About Me (&) My Journey",
-    "intro": "I got into SEO wanting to know why some sites grow without ad spend while others stay invisible. Three years and 30+ websites later, I am still chasing that answer.",
+    "intro": "I started out wanting to know why some sites pull traffic for free while others pay for every visitor and still go unseen. Thirty-odd websites later, that is still the question I open every project with.",
     "cards": [
       {
-        "year": "'22",
-        "heading": "Where the questions started",
-        "short": "BBA Marketing at IMSciences, Peshawar. The degree gave me the framework; search gave me the obsession.",
+        "year": "'20",
+        "heading": "Marketing, from the ground up",
+        "short": "BBA Marketing at IMSciences, Peshawar. Four years on consumer behaviour, brand strategy and what actually makes people buy.",
         "handle": "@imsciences",
-        "long": "I studied BBA Marketing at IMSciences in Peshawar. Somewhere between coursework and curiosity I started asking why some websites pull traffic for free while others pay for every visitor and still stay invisible.",
+        "long": "I read BBA Marketing at the Institute of Management Sciences in Peshawar. Consumer behaviour, brand strategy, market research, the fundamentals. It taught me to think about buyers before channels, and that habit has served me better than any tool I have picked up since.",
         "logo": "imsciences"
       },
       {
         "year": "'22",
-        "heading": "Measuring what people trust",
-        "short": "Final year research on consumer trust in e-commerce and how perceived risk shapes what people actually buy.",
+        "heading": "What makes people trust a website",
+        "short": "Research on consumer trust in e-commerce, and how perceived risk quietly decides what people are willing to buy.",
         "handle": "@research",
-        "long": "My final year research looked at consumer trust in e-commerce and its effect on online purchasing behaviour, using the PROCESS macro and a Sobel test to measure perceived risk as a mediating variable. The same quantitative thinking still shapes how I read conversion behaviour and SEO performance.",
+        "long": "My research looked at consumer trust in e-commerce and how it shapes online purchasing, using the PROCESS macro and a Sobel test to isolate perceived risk as a mediating variable. Dry work on paper. It also changed how I read a conversion rate for good, because the number on its own never tells you what the visitor was worried about.",
         "logo": "imsciences"
       },
       {
         "year": "'23",
-        "heading": "First real audits",
-        "short": "Learning that most sites are not held back by content. They are held back by things nobody has looked at.",
+        "heading": "First audits, first surprises",
+        "short": "Most sites are not held back by their writing. They are held back by things nobody has looked at in a year.",
         "handle": "@seo",
-        "long": "Early audit work taught me the pattern that still holds: most websites are not underperforming because the writing is weak. They are underperforming because crawl paths are broken, titles are duplicated, and nobody has checked in months.",
-        "logo": "unitedsol"
+        "long": "The first proper audits I ran taught me a pattern I still see every month. Everyone assumes the content is the problem. It rarely is. It is a redirect chain nobody noticed, forty pages sharing one meta title, a robots rule left over from staging. Unglamorous, and usually the reason nothing is moving.",
+        "logo": "imsciences"
       },
       {
         "year": "'24",
-        "heading": "Technical foundations",
-        "short": "Crawl budgets, redirect chains, schema, indexation. The unglamorous work that decides everything else.",
-        "handle": "@technical",
-        "long": "I went deep on technical SEO because it is where the compounding happens. Speed issues, redirect chains and indexation gaps quietly cost rankings every single week, and none of it shows up in a content calendar.",
+        "heading": "The unglamorous half",
+        "short": "Technical SEO at UnitedSol. Crawl paths, redirect chains, schema, indexation. None of it looks like marketing.",
+        "handle": "@unitedsol",
+        "long": "At UnitedSol I went deep on the technical side. Crawl budget, indexation gaps, redirect chains, schema, page speed. This is where the compounding lives, and it is also the work nobody puts in a client update. Fix it once and everything you publish afterwards works harder for you.",
         "logo": "unitedsol"
       },
       {
         "year": "'25",
-        "heading": "Seven sites at once",
-        "short": "Google Ads & SEO Executive at DX Creativ. Seven live client sites, every one at a different stage.",
+        "heading": "Seven sites, seven problems",
+        "short": "Google Ads and SEO at DX Creativ. Seven live client sites, every one broken in a different way.",
         "handle": "@dxcreativ",
-        "long": "At DX Creativ I managed full SEO across seven live client websites simultaneously, spanning technical audits, on-page fixes, content strategy and link-building oversight, while running Google Ads search campaigns for lead generation alongside it.",
-        "logo": "unitedsol"
+        "long": "At DX Creativ I ran SEO across seven live client websites at once, covering technical audits, on-page work, content strategy and link-building oversight, with Google Ads search campaigns running alongside. Seven sites at seven different stages will teach you prioritisation faster than any course. There is never time to fix everything, so you learn to find the one change that moves the most.",
+        "logo": "dxcreativ"
       },
       {
         "year": "'26",
-        "heading": "Paid and organic as one system",
-        "short": "Performance Growth Marketer at Remote Opus. Ads and SEO stopped being two separate jobs.",
+        "heading": "Paid and organic, same system",
+        "short": "Performance marketing at Remote Opus. Ads and SEO stopped being two separate jobs.",
         "handle": "@remoteopus",
-        "long": "At Remote Opus I run performance marketing end to end: Google and Meta Ads, SEO, landing pages, and conversion tracking. Seeing which keywords convert in paid is the fastest way to sharpen the organic strategy, so I stopped treating them as separate disciplines.",
+        "long": "At Remote Opus I own performance marketing end to end. Google and Meta Ads, SEO, landing pages, conversion tracking. Running both sides showed me how much gets wasted by keeping them apart. Paid tells you inside a fortnight which keywords bring buyers rather than browsers, and that is the most useful input an organic strategy can have.",
         "logo": "remote-opus"
       },
       {
         "year": "'26",
-        "heading": "The work continues",
-        "short": "Still auditing what is broken, fixing what matters most, and building around what buyers already search for.",
+        "heading": "Still the same question",
+        "short": "What is actually stopping this site from growing? Everything I do follows from the answer.",
         "handle": "@johar",
-        "long": "The approach has not changed: audit what is broken, fix what matters most, and build content and campaigns around what buyers are already searching for. Not templates, not guesswork.",
-        "logo": "remote-opus"
+        "long": "The method has not changed since that first audit. Find what is broken, rank it by what it costs you, fix the expensive things first, then build content and campaigns around what buyers are already typing into Google. No templates, no guesswork, and no reporting that quietly hides a bad month.",
+        "logo": "johar-dp"
       }
     ]
   },
   "projects": {
     "heading": "Built for Search,Made to Convert",
-    "intro": "Three years across e-commerce, travel, B2B services and agency portfolios. Below are real projects with real numbers, plus the work I do most often.",
+    "intro": "Three years across e-commerce, travel, B2B services and agency portfolios. Real projects with real numbers below, then the work I am asked for most.",
     "cards": [
       {
         "name": "E-Commerce SEO",
-        "text": "Hundreds of indexed pages and almost no organic traffic. A full crawl surfaced 200+ issues; 14 keywords moved to page 1 within 4 months."
+        "text": "Hundreds of indexed pages and almost no organic traffic. A full crawl surfaced over 200 issues. Fourteen keywords reached page one inside four months."
       },
       {
         "name": "PAK Tour Guide",
-        "text": "Launched with no domain authority and zero local visibility. Destination landing pages and a fully optimised Business Profile took it from zero to 1,000 monthly organics in 5 months."
+        "text": "Launched with no authority and no local visibility at all. Destination pages and a properly built Business Profile took it from zero to 1,000 monthly organics in five months."
       },
       {
         "name": "Agency Portfolio",
-        "text": "Seven live client websites managed at once, each at a different maturity stage, averaging 38% traffic growth across the portfolio."
+        "text": "Seven client sites managed at once, each at a different stage. Traffic grew 38% on average across the portfolio."
       },
       {
         "name": "Technical SEO",
-        "text": "Crawl paths, redirect chains, indexation gaps and page speed. The issues that silently suppress rankings before content ever gets a chance."
+        "text": "Crawl paths, redirect chains, indexation gaps, page speed. The problems that quietly suppress rankings long before content gets a fair test."
       },
       {
         "name": "On-Page SEO",
-        "text": "Keyword placement, heading structure, content depth and internal linking. The details that separate position 8 from position 2."
+        "text": "Keyword placement, heading structure, depth, internal linking. Small things on their own. Together they are the gap between position eight and position two."
       },
       {
         "name": "Keyword Research",
-        "text": "Finding what buyers actually search rather than what sounds right internally. Ranking for the wrong terms wastes months."
+        "text": "What buyers actually type, not what sounds right in a meeting. Ranking for the wrong phrase costs you months and teaches you nothing."
       },
       {
         "name": "Google Ads",
-        "text": "Search campaigns for lead generation, with ongoing optimisation of keywords, bids and ad copy to bring cost per conversion down."
+        "text": "Search campaigns built for leads, then tightened continuously on keywords, bids and copy until cost per conversion comes down and stays down."
       },
       {
         "name": "Meta Ads",
-        "text": "Audience targeting, budget allocation and bid optimisation managed end to end, aimed at cost per acquisition rather than reach."
+        "text": "Targeting, budget and bids managed end to end, judged on cost per acquisition rather than reach or impressions."
       },
       {
         "name": "Local SEO",
-        "text": "Google Business Profile optimisation, local pack visibility and the service pages that turn nearby searches into enquiries."
+        "text": "Business Profile optimisation, local pack visibility, and the service pages that turn a nearby search into a phone call."
       }
     ]
   },
   "overview": {
     "heading": "What You Get?",
-    "intro": "Technical fixes, search strategy and paid media working as one system, pointed at qualified traffic and leads rather than vanity metrics.",
+    "intro": "Technical fixes, search strategy and paid media pulling the same direction, pointed at qualified traffic and enquiries rather than numbers that only look good in a slide.",
     "cards": [
       {
         "heading": "SEO Audits",
-        "text": "A full crawl and a prioritised list of what is actually blocking rankings, ordered by impact rather than by how easy it is to fix."
+        "text": "A full crawl and a plain list of what is blocking you, ordered by what it costs rather than by how quick it is to fix."
       },
       {
         "heading": "Technical SEO",
-        "text": "Crawl paths, redirect chains, schema and indexation resolved so search engines can properly reach and understand every page."
+        "text": "Crawl paths, redirect chains, schema and indexation sorted, so search engines can reach every page and understand what it is for."
       },
       {
         "heading": "Content & On-Page",
-        "text": "Keyword strategy, heading structure, content depth and internal linking built around real search intent."
+        "text": "Keyword strategy, structure, depth and internal linking, built around what the searcher actually wanted when they typed it."
       },
       {
         "heading": "Paid Media",
-        "text": "Google and Meta Ads managed end to end, from targeting and budget to bids and ad copy, optimised toward cost per acquisition."
+        "text": "Google and Meta Ads run end to end, from targeting and budget through to bids and copy, optimised toward cost per acquisition."
       },
       {
         "heading": "Conversion Optimisation",
-        "text": "Tracking set up correctly, then the full funnel tuned so the traffic you already have turns into enquiries."
+        "text": "Tracking set up properly first, then the funnel tuned so the traffic you already pay for stops leaking."
       }
     ]
   },
   "services": {
     "heading": "Ways We Can Work",
-    "intro": "Same process and same attention either way. The difference is scope and how much of it you need right now.",
+    "intro": "Same process and the same attention either way. What changes is the scope, and how much of it you need right now.",
     "cards": [
       {
         "heading": "Monthly Retainer",
         "price": "Retainer",
         "unit": "/ ongoing",
-        "text": "Ongoing SEO and paid media ownership. Technical fixes, content strategy and campaign management handled continuously.",
+        "text": "I take ownership of SEO and paid media together. Technical fixes, content strategy and campaigns handled continuously rather than in bursts.",
         "items": [
-          "Technical SEO monitoring and fixes",
-          "Content strategy and on-page execution",
+          "Technical monitoring and fixes",
+          "Content strategy and on-page work",
           "Google and Meta Ads management",
           "Conversion tracking and reporting",
-          "Monthly performance review"
+          "Monthly review with what changed"
         ],
-        "footer": "For businesses that need compounding growth rather than a one-off push."
+        "footer": "For businesses after compounding growth rather than a one-off push."
       },
       {
         "heading": "SEO Audit",
         "price": "Audit",
         "unit": "",
-        "text": "A full technical and on-page audit with a prioritised action plan. You get the findings whether or not we work together afterwards.",
+        "text": "A full technical and on-page audit with a prioritised plan. The findings are yours whether or not we work together afterwards.",
         "items": [
-          "Full site crawl and issue log",
+          "Full crawl and issue log",
           "Technical, on-page and content review",
           "Keyword and competitor gap analysis",
-          "Prioritised fix list ordered by impact",
-          "Walkthrough call to talk it through"
+          "Fix list ordered by impact",
+          "A call to walk through it properly"
         ],
-        "footer": "For sites that are underperforming without an obvious reason."
+        "footer": "For sites underperforming with no obvious explanation."
       },
       {
         "heading": "Project Work",
         "price": "Book a Call",
         "unit": "",
-        "text": "Scoped engagements: a migration, a launch, a rebuild, or an SEO foundation set before development starts rather than patched in after.",
+        "text": "Scoped pieces of work. A migration, a launch, a rebuild, or SEO built into a site before development starts instead of patched on afterwards.",
         "items": [
-          "SEO requirements defined before build",
+          "SEO requirements set before build",
           "Migration and launch planning",
-          "Schema implementation across page types",
+          "Schema across every page type",
           "Local SEO and Business Profile setup",
           "Handover documentation"
         ],
-        "footer": "For a defined piece of work with a clear finish line."
+        "footer": "For a defined job with a clear finish line."
       }
     ]
   },
@@ -210,20 +210,20 @@
     "items": [
       {
         "title": "Found what we had been ignoring.",
-        "quote": "Johar audited our website and found issues we had been ignoring for months. He explained what mattered, fixed it, and our Search Console impressions were up significantly within 6 weeks. Straightforward and reliable.",
-        "name": "Ahmed K.",
-        "role": "B2B Services Company, Pakistan"
+        "quote": "Johar audited our site and found problems we had been walking past for months. He explained what mattered, fixed it, and Search Console impressions were up sharply inside six weeks. No fuss and no jargon.",
+        "name": "Client name",
+        "role": "B2B Services, Pakistan"
       },
       {
         "title": "Focused on what moves numbers.",
-        "quote": "We brought Johar in for Google Ads and on-page SEO at the same time. Cost per lead dropped around 30% in the first month and three service pages hit page 1 within 8 weeks. He focuses on what moves numbers, not on looking busy.",
-        "name": "Sara M.",
-        "role": "E-commerce Brand, UAE"
+        "quote": "We brought Johar in for Google Ads and on-page SEO at the same time. Cost per lead fell around 30% in the first month and three service pages reached page one within eight weeks. He works on what moves numbers rather than on looking busy.",
+        "name": "Client name",
+        "role": "E-commerce, UAE"
       },
       {
         "title": "Understood how people search.",
-        "quote": "We had no organic presence when we started. Johar built the content plan, handled the Google Business Profile, and we got our first organic enquiries within about 3 months. He understands how people search in this space, which made a real difference.",
-        "name": "Raza H.",
+        "quote": "We had no organic presence at all when we started. Johar built the content plan, sorted the Business Profile, and the first organic enquiries arrived around three months later. He understands how people search in this market, and it showed.",
+        "name": "Client name",
         "role": "Tour Operator, Pakistan"
       }
     ]
@@ -233,35 +233,35 @@
     "items": [
       {
         "q": "How long before I see results?",
-        "a": "Technical fixes can show movement in weeks; content and authority take months. Most projects show measurable change in Search Console within 6 to 12 weeks, with the larger gains compounding after that. Anyone promising page 1 in 30 days is selling something."
+        "a": "Technical fixes can show movement in weeks. Content and authority take months. Most projects show something measurable in Search Console between six and twelve weeks, and the real gains compound after that. If someone promises you page one in thirty days, they are selling you something."
       },
       {
         "q": "Do you work on paid ads as well as SEO?",
-        "a": "Yes, and I prefer to run them together. Paid data tells you which keywords actually convert, which makes the organic strategy far sharper. Treating them as two separate jobs wastes the most useful signal you have."
+        "a": "Yes, and I would rather run both. Paid data tells you which keywords bring buyers within a couple of weeks, information that organic takes months to earn. Keeping them in separate silos wastes the most useful signal you have."
       },
       {
         "q": "What does an SEO audit actually cover?",
-        "a": "A full crawl of the site, then technical, on-page and content review, plus keyword and competitor gap analysis. You get a prioritised fix list ordered by impact rather than by ease, and a call to walk through it."
+        "a": "A full crawl, then a technical, on-page and content review, plus keyword and competitor gap analysis. You get a fix list ordered by impact rather than by effort, and a call where I walk you through it instead of emailing a PDF and disappearing."
       },
       {
         "q": "Can you work with my existing site?",
-        "a": "That is most of what I do. Whether it needs a technical cleanup, a content structure, schema, or a full migration handled without losing rankings, I can step into an existing build rather than starting over."
+        "a": "That is most of what I do. Technical cleanup, content structure, schema, or a migration handled without losing rankings. I can step into a build that already exists rather than insisting on starting again."
       },
       {
         "q": "Which platforms have you worked with?",
-        "a": "WordPress, Shopify, Magento and Strapi among others, across e-commerce, travel, B2B services and agency portfolios. The platform changes what is easy; it rarely changes what actually needs fixing."
+        "a": "WordPress, Shopify, Magento and Strapi, among others, across e-commerce, travel, B2B services and agency portfolios. The platform changes what is easy. It almost never changes what needs fixing."
       },
       {
         "q": "Do you handle local SEO?",
-        "a": "Yes. Google Business Profile optimisation, local pack visibility, and the service and location pages that turn nearby searches into enquiries. It is often the fastest win for service businesses."
+        "a": "Yes. Business Profile optimisation, local pack visibility, and the service and location pages that turn a nearby search into an enquiry. For service businesses it is usually the fastest win available."
       },
       {
         "q": "How do you report on progress?",
-        "a": "Search Console and analytics data rather than screenshots of rankings. You see impressions, clicks, positions and conversions, plus what changed and what it moved. If something is not working I will tell you."
+        "a": "Search Console and analytics, not screenshots of rankings. Impressions, clicks, positions, conversions, what I changed and what it moved. If a month goes badly you will hear it from me first."
       },
       {
         "q": "Not sure what your site needs?",
-        "a": "Reach out and describe the situation. Most audits and strategy calls start within 48 hours, and you will get an honest read on what is holding the site back, with no sales pitch attached."
+        "a": "Send me the URL and describe the situation. Most audits and strategy calls start within 48 hours, and you will get an honest read on what is holding the site back with no pitch attached."
       }
     ]
   },

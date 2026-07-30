@@ -131,33 +131,61 @@ if (years.length) hit(`about years (${years.length}, odometer attr + text synced
 // detected: a colour-count test misreads the yellow-on-beige "W" as a photo,
 // and guessing wrong would replace somebody's face.
 const AV = 'assets/local-logos/';
-const MARK_SWAPS = [
-  // card index, logo, [light-variant file, dark-variant file] of the mark to replace
-  { card: 0, logo: 'imsciences',
-    light: '6938003e6bd18390b3bef67c_Frame 116046197.avif',   // Webflow "W", light
-    dark: '6945df05a90861c514ccbed5_Frame 116046201-1.svg' }, // Webflow "W", dark
-  { card: 4, logo: 'unitedsol',
-    light: '69399f9348881bb03b006451_Frame 116046201-1.avif', // shield mark, light
-    dark: '6945df05fc58dfb3e9f5fbec_Frame 116046197.svg' },   // shield mark, dark
-  { card: 5, logo: 'remote-opus',
-    light: '69399f936be7964da2364eca_Frame 116046201.avif',   // home mark, light
-    dark: '6945df057a20901ce46dcb36_Frame 116046197-3.svg' }, // home mark, dark
+
+// Slot assignment is by INDEX, measured in the browser rather than guessed.
+// Each card renders two overlapping pairs (the card itself and its popup), and
+// within each pair one circle sits in front and covers ~34% of the other:
+//
+//   card[0]  [0] z=3    front of the light pair
+//            [1] z=1    behind, 34% covered by [0]
+//            [2] z=auto behind, covered by [3]
+//            [3] z=1    front of the dark pair
+//
+// Logos therefore go in the FRONT slots ([0] and [3]) so wordmarks are never
+// clipped, and the neutral monogram fills the ones behind. This only rewrites
+// src/alt — no element is added, removed or reordered.
+// Which slot sits in FRONT differs per card, measured in the browser:
+//
+//   card 0        [0] cls="z-index-s" z=3   ← front of the light pair
+//   cards 4,5,6   [0] cls=""         z=auto ← BEHIND
+//                 [1] cls="is-riight-side" z=1  ← front of the light pair
+//   all cards     [3] cls="is-riight-side" z=1  ← front of the dark pair
+//
+// So the logo goes in [0] on card 0 but in [1] on the others. Assuming slot 0
+// was always the front is what left the DX Creativ wordmark clipped.
+const SLOTS = [
+  { card: 0, map: { 0: 'imsciences-circle-light', 1: 'monogram-circle-light',
+                    2: 'monogram-circle-dark', 3: 'imsciences-circle-dark' } },
+  // Card 3 is the technical SEO period, which was UnitedSol.
+  { card: 3, map: { 0: 'monogram-circle-light', 1: 'unitedsol-circle-light',
+                    2: 'monogram-circle-dark', 3: 'unitedsol-circle-dark' } },
+  // DX Creativ's own mark. The wordmark they publish is 4.80:1, far too wide to
+  // read inside a small circle, so the colour "Dx" symbol from their favicon is
+  // used on the light disc and a white silhouette on the dark one.
+  { card: 4, map: { 0: 'monogram-circle-light', 1: 'dxcreativ-circle-light',
+                    2: 'monogram-circle-dark', 3: 'dxcreativ-circle-dark' } },
+  { card: 5, map: { 0: 'monogram-circle-light', 1: 'remote-opus-circle-light',
+                    2: 'monogram-circle-dark', 3: 'remote-opus-circle-dark' } },
+  // card 6 is the personal one (@johar), so it carries your own DP photo rather
+  // than a company mark. Two circles only: [0] light theme, [1] dark theme.
+  { card: 6, map: { 0: 'johar-dp-circle-light', 1: 'johar-dp-circle-dark' } },
 ];
+
 let swapped = 0;
 const cardsEls = about.find('.about-card');
-for (const s of MARK_SWAPS) {
+for (const s of SLOTS) {
   const card = cardsEls.eq(s.card);
-  if (!card.length) continue;
+  if (!card.length) { miss(`about card ${s.card}`); continue; }
   card.find('.about-card-img').each((i, e) => {
-    const src = decodeURIComponent($(e).attr('src') || '');
-    const variant = src.endsWith(s.light) ? 'light' : src.endsWith(s.dark) ? 'dark' : null;
-    if (!variant) return;
-    $(e).attr('src', `${AV}${s.logo}-circle-${variant}.png`)
-      .attr('alt', s.logo).removeAttr('srcset').removeAttr('sizes');
+    const asset = s.map[i];
+    if (!asset) return;
+    const label = asset.startsWith('monogram') ? 'Johar Rehman' : asset.split('-circle')[0];
+    $(e).attr('src', AV + asset + '.png').attr('alt', label)
+      .removeAttr('srcset').removeAttr('sizes');
     swapped++;
   });
 }
-hit(`about card marks → provided logos (${swapped} images across ${MARK_SWAPS.length} cards)`);
+hit(`about card circles → logos in front, monogram behind (${swapped} images, ${SLOTS.length} cards)`);
 
 // Marquee logos are handled further down, in the block that also covers the two
 // <div> slots and parses its SVG fragment in XML mode. Do not add a second
@@ -247,7 +275,13 @@ if (slides.length) {
     // Element kept; only the src/alt change — same swap class as the profile photo.
     const av = s.find('.client-img').first();
     if (av.length) {
-      av.attr('src', `assets/cdn.prod.website-files.com/691d7c9f14d0280ebe2d4108/avatar-${t.name.trim()[0].toLowerCase()}.avif`);
+      // The avatar was derived from the author's initial, which 404s the moment
+      // a name changes. Fall back to a neutral avatar when no letter tile exists.
+      const dir = 'assets/cdn.prod.website-files.com/691d7c9f14d0280ebe2d4108/';
+      const initial = (t.name || '').trim()[0];
+      const letterFile = initial ? `avatar-${initial.toLowerCase()}.avif` : null;
+      const useLetter = letterFile && fs.existsSync(path.join(OUT, dir, letterFile));
+      av.attr('src', dir + (useLetter ? letterFile : 'avatar-placeholder.avif'));
       av.attr('alt', t.name).removeAttr('srcset').removeAttr('sizes');
     }
     // Element kept — text and href rewritten rather than removed.
@@ -310,14 +344,25 @@ if (img.length) {
 // Footer wordmark: a clipPath the image-trail reveals photos through. Only the
 // clip shape changes; #nesh-clip keeps its id, and .footer-logo,
 // .footer-logo-icon and #image-trail-group are untouched, so the effect works.
+// The footer viewBox is 1388 wide against the nav logo's 1288. That extra 100
+// units is where the registered mark sat, which a single centred <text> both
+// ignored and undersized. Mirror the nav exactly: five letters on a 1288 grid at
+// font-size 420, then the ® in the remaining space.
 const clip = $('#nesh-clip');
 if (clip.length) {
-  clip.empty().append(
-    `<text x="694" y="169" text-anchor="middle" dominant-baseline="central" ` +
-    `font-family="Ppneuemontreal, sans-serif" font-weight="700" font-size="300" ` +
-    `letter-spacing="-10">JOHAR</text>`
-  );
-  hit('footer wordmark → JOHAR  [vector: 5 paths → 1 text]');
+  const WORD = 'JOHAR';
+  const GRID = 1288;
+  const cell = GRID / WORD.length;
+  const FONT = "Ppneuemontreal, 'PP Neue Montreal', Arial, sans-serif";
+  const letters = [...WORD].map((ch, i) =>
+    `<text x="${(cell * i + cell / 2).toFixed(1)}" y="338" text-anchor="middle" ` +
+    `font-family="${FONT}" font-weight="700" font-size="420">${ch}</text>`
+  ).join('');
+  const reg =
+    `<text x="1338" y="120" text-anchor="middle" ` +
+    `font-family="${FONT}" font-weight="700" font-size="132">®</text>`;
+  clip.empty().append(letters + reg);
+  hit(`footer wordmark → ${WORD} + registered mark  [${WORD.length} letters at 420, matching the nav]`);
 } else miss('footer clip-path');
 
 // The years figure is drawn TWICE with two different class names: .experience-number
