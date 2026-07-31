@@ -124,6 +124,25 @@ years.each((i, e) => {
 });
 if (years.length) hit(`about years (${years.length}, odometer attr + text synced)`); else miss('about years');
 
+// Each "Read more" popup carries its OWN full-year div, unclassed and separate
+// from the card's .about-card-year. Updating only the card left every popup
+// showing the original timeline: Remote Opus opened at 2024, DX Creativ at 2023.
+const popups = $('.popup-card-wrap');
+let pYears = 0;
+popups.each((i, p) => {
+  const c = C.about.cards[i];
+  if (!c) return;
+  const digits = String(c.year).replace(/\D/g, '');
+  if (digits.length !== 2) return;
+  const full = `20${digits}`;
+  const yr = $(p).find('div').filter((j, d) =>
+    /^\s*\d{4}\s*$/.test($(d).clone().children().remove().end().text())).first();
+  if (!yr.length) return;
+  writeInto(yr.get(0), full);
+  pYears++;
+});
+if (pYears) hit(`popup years synced to cards (${pYears})`); else miss('popup years');
+
 // Card avatar circles: swap ONE tech-stack mark for the relevant provided logo.
 // Headshots are never touched. Each mark exists as a light-theme and a
 // dark-theme variant because ThemeSwitcher inverts these sections, so both are
