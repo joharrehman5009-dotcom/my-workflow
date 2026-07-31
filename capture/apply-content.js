@@ -439,9 +439,13 @@ if (numb.length) {
 // artwork they replace — so the logos still invert with the theme switcher.
 // The two <div> slots already ship a dark and a white image for that same
 // purpose, so those just get their src swapped.
-const LOGOS = ['remote-opus', 'imsciences', 'unitedsol'];
+//
+// The duplicated second marquee item is NOT a copy of the first: two of its
+// slots are bare <img> children rather than <svg> or <div>, so they fell through
+// both branches and kept the original happyring / semiconBio artwork.
+const LOGOS = ['remote-opus', 'imsciences', 'unitedsol', 'dxcreativ'];
 const LDIR = 'assets/local-logos/';
-let slot = 0, svgN = 0, divN = 0;
+let slot = 0, svgN = 0, divN = 0, imgN = 0;
 $('.nav-comapny-item').each((mi, item) => {
   $(item).children().each((ci, e) => {
     const el = $(e);
@@ -463,6 +467,14 @@ $('.nav-comapny-item').each((mi, item) => {
       // the void element <img>, which silently emptied the whole mask.
       el.empty().append(cheerio.load(`<r>${frag}</r>`, { xmlMode: true })('r').children());
       svgN++;
+    } else if (e.tagName === 'img') {
+      // A bare <img> slot. The unsuffixed class is the light-theme variant, so
+      // it takes the dark silhouette; "-white" classes take the white one.
+      const cls = el.attr('class') || '';
+      const variant = /-white\b/.test(cls) ? 'white' : 'black';
+      el.attr('src', `${LDIR}${name}-${variant}.png`).attr('alt', name)
+        .removeAttr('srcset').removeAttr('sizes');
+      imgN++;
     } else {
       const imgs = el.find('img');
       if (imgs.length >= 2) {
@@ -473,7 +485,7 @@ $('.nav-comapny-item').each((mi, item) => {
     }
   });
 });
-if (svgN + divN) hit(`marquee logos → ${LOGOS.join(', ')}  [${svgN} svg slots + ${divN} img pairs, geometry unchanged]`);
+if (svgN + divN + imgN) hit(`marquee logos → ${LOGOS.join(', ')}  [${svgN} svg + ${divN} img pairs + ${imgN} bare img, geometry unchanged]`);
 else miss('marquee logos');
 
 // ---------- footer bio / email / links (text + attributes only) ----------
