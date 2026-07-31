@@ -220,9 +220,16 @@ if (cards.length) {
     // .work-label holds the card number followed by 2-3 stack tags. The tags were
     // still the original site's toolkit (GSAP, CMS, API, Components, Webflow).
     // The leading number is part of the design and is left alone.
+    // Slots hold either two or three tags depending on the card, so a short tag
+    // list silently leaves one of the original stack labels behind. Warn rather
+    // than let that slip through, which is how "Performance" survived a reorder.
     const labels = workCard.find('.work-label').toArray()
       .filter((el) => !/^\d+$/.test($(el).text().trim()));
-    labels.forEach((el, k) => { if (c.tags && c.tags[k]) writeInto(el, c.tags[k]); });
+    const tags = c.tags || [];
+    if (tags.length < labels.length) {
+      console.warn(`    !! "${c.name}" has ${labels.length} tag slots but only ${tags.length} tags`);
+    }
+    labels.forEach((el, k) => { if (tags[k]) writeInto(el, tags[k]); });
   });
   hit(`project cards (${cards.length}) + stack tags`);
 } else miss('project cards');
@@ -498,6 +505,61 @@ $('.faq-answer').each((i, e) => {
 $('a[href*="linkedin.com"]').attr('href', C.meta.linkedin);
 $('a[href*="cal.com"], a[href*="x.com"]').attr('href', C.meta.whatsapp);
 hit('outbound links → your LinkedIn / WhatsApp');
+
+// ---------- dead call-to-action links ----------
+// "Book a Call" and "Let's Talk" both pointed at "#", so the primary conversion
+// buttons on the page did nothing. Point them at a channel that actually works.
+let wired = 0;
+$('a').each((i, e) => {
+  const el = $(e);
+  if ((el.attr('href') || '').trim() !== '#') return;
+  const label = el.text().replace(/\s+/g, ' ').trim().toLowerCase();
+  const cls = el.attr('class') || '';
+  if (/book a call|let's talk|lets talk/.test(label) || /nav-button|cta-button/.test(cls)) {
+    el.attr('href', C.meta.whatsapp).attr('target', '_blank').attr('rel', 'noopener');
+    wired++;
+  } else if (/social-link/.test(cls)) {
+    // Two social icons, in markup order: X then LinkedIn.
+    el.attr('href', wired % 2 === 0 ? C.meta.linkedin : C.meta.linkedin)
+      .attr('target', '_blank').attr('rel', 'noopener');
+    wired++;
+  } else if (el.closest('.faq-answer').length) {
+    el.attr('href', 'mailto:' + C.meta.email);
+    wired++;
+  }
+});
+hit(`dead links wired up (${wired})`);
+
+// ---------- work card links ----------
+// Every work card linked straight out to the original client's live site
+// (1910.ai, semiconbio.com, alosant.com and six more). The href is removed while
+// the <a> element itself stays, so the card layout and hover states are intact.
+let unlinked = 0;
+$('a.work-card').each((i, e) => {
+  const el = $(e);
+  if (!el.attr('href')) return;
+  el.removeAttr('href').removeAttr('target').removeAttr('rel');
+  unlinked++;
+});
+hit(`work card outbound links removed (${unlinked})`);
+
+// ---------- document level SEO / accessibility ----------
+$('html').attr('lang', 'en');
+if (!$('link[rel=canonical]').length) {
+  $('head').append(`<link rel="canonical" href="${C.meta.canonical || 'https://joharrehman5009-dotcom.github.io/'}"/>`);
+}
+// The share card was still the previous owner's photograph.
+const og = 'assets/local-logos/johar-opengraph.jpg';
+$('meta[property="og:image"], meta[name="twitter:image"]').attr('content', og);
+if (!$('meta[name="twitter:image"]').length) {
+  $('head').append(`<meta name="twitter:image" content="${og}"/>`);
+}
+// Decorative marks with no alt text.
+let alts = 0;
+$('img').each((i, e) => {
+  if ($(e).attr('alt') === undefined) { $(e).attr('alt', ''); alts++; }
+});
+hit(`lang=en, canonical, OpenGraph card, ${alts} missing alt attributes`);
 
 fs.writeFileSync(FILE, $.html());
 console.log(log.join('\n'));
