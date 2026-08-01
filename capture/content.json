@@ -27,7 +27,10 @@
       "About Me"
     ],
     "sidebarBio": "SEO, paid search and conversion work run together. Judged on revenue, not on rankings.",
-    "headingOneLine": true
+    "headingLines": [
+      "Search That",
+      "Pays For Itself."
+    ]
   },
   "about": {
     "heading": "About Me (&) My Journey",

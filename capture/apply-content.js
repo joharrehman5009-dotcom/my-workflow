@@ -85,11 +85,18 @@ setText('.hero-left-text', C.hero.leftText, 'hero left text', hero);
 // The heading ships with two hard <br> forcing three lines. Dropping them is a
 // structural edit, so it only happens when content.json asks for it.
 const headingEl = hero.find('.hero-heading').first();
-if (headingEl.length && C.hero.headingOneLine) {
-  const brs = headingEl.find('br').length;
-  headingEl.find('br').remove();
-  headingEl.text(C.hero.heading);
-  hit(`hero heading → one line (${brs} <br> removed)`);
+if (headingEl.length && Array.isArray(C.hero.headingLines)) {
+  // The element ships with two hard breaks, giving three lines. Rebuild it with
+  // exactly one break per gap in headingLines so the wording controls the layout
+  // rather than the original markup.
+  const before = headingEl.find('br').length;
+  const lines = C.hero.headingLines;
+  headingEl.empty();
+  lines.forEach((line, k) => {
+    headingEl.append(k === lines.length - 1 ? line : line + ' ');
+    if (k < lines.length - 1) headingEl.append('<br/>');
+  });
+  hit(`hero heading → ${lines.length} lines (${before} <br> → ${lines.length - 1})`);
 } else {
   setText('.hero-heading', C.hero.heading, 'hero heading (br preserved)', hero);
 }
