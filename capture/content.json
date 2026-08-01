@@ -9,7 +9,7 @@
     "canonical": "https://joharrehman5009-dotcom.github.io/"
   },
   "hero": {
-    "leftText": "The search and growth guy. That's Johar.",
+    "leftText": "SEO and paid search. That's Johar.",
     "heading": "Search That Pays For Itself.",
     "rightText": "I work with your team on SEO, paid search, and whatever is leaking between the two. Judged on revenue, not on a rankings screenshot.",
     "projectsStat": "30+Websites",
@@ -26,7 +26,8 @@
       "Book a Call",
       "About Me"
     ],
-    "sidebarBio": "SEO, paid search and conversion work run together. Judged on revenue, not on rankings."
+    "sidebarBio": "SEO, paid search and conversion work run together. Judged on revenue, not on rankings.",
+    "headingOneLine": true
   },
   "about": {
     "heading": "About Me (&) My Journey",
@@ -263,31 +264,31 @@
     "items": [
       {
         "title": "Focused on profitable growth.",
-        "quote": "We hired Johar to rebuild our Google Ads account after months of poor results. He restructured the campaigns, improved conversion tracking, and removed wasted spend. Within six weeks, our cost per conversion dropped by 34%, while qualified leads increased. Every decision was backed by data.",
+        "quote": "We hired Johar to rebuild our Google Ads account after months of poor results. He restructured the campaigns, improved conversion tracking, and cut wasted spend. Within six weeks our cost per conversion dropped 34% and qualified leads increased.",
         "name": "Ahmed Al Mansoori",
         "role": "Home Services, Dubai, UAE"
       },
       {
         "title": "Found problems others missed.",
-        "quote": "Our website had indexing issues, slow-loading pages, and technical errors that were holding back rankings. Johar completed a full technical audit, fixed crawl issues, improved Core Web Vitals, and cleaned up redirects. Organic traffic kept growing over the following months, and Google started indexing pages much faster.",
+        "quote": "Our site had indexing problems, slow pages, and technical errors holding back rankings. Johar ran a full audit, fixed the crawl issues, improved Core Web Vitals, and cleaned up redirects. Organic traffic kept climbing and Google indexed pages far faster.",
         "name": "Fatima Al Nuaimi",
         "role": "Healthcare, Abu Dhabi, UAE"
       },
       {
         "title": "Our phones started ringing again.",
-        "quote": "We wanted to appear in local searches across Amsterdam but had very little visibility. Johar optimized our Google Business Profile, improved local landing pages, built location signals, and fixed inconsistent business information. Calls and direction requests increased steadily within a few weeks.",
+        "quote": "We wanted to show up in local searches across Amsterdam but had almost no visibility. Johar optimised our Business Profile, improved the local landing pages, and fixed our inconsistent business details. Calls and direction requests climbed within weeks.",
         "name": "Jeroen van Dijk",
         "role": "Home Improvement, Amsterdam, Netherlands"
       },
       {
         "title": "Campaigns that actually reached buyers.",
-        "quote": "We had been spending money on Meta Ads without seeing consistent sales. Johar rebuilt the campaign structure, improved audience targeting, tested multiple creatives, and refined the conversion funnel. Purchases increased while our cost per acquisition became much more predictable.",
+        "quote": "We were spending on Meta Ads without seeing consistent sales. Johar rebuilt the campaign structure, sharpened the audience targeting, tested new creative, and tightened the funnel. Purchases went up and our cost per acquisition became predictable.",
         "name": "Noor Al Mazrouei",
         "role": "Fashion Brand, Sharjah, UAE"
       },
       {
         "title": "Every page had a clear purpose.",
-        "quote": "Johar optimized our service pages with better content structure, internal linking, metadata, and search intent. Rankings improved across several important keywords, and visitors spent more time on the website. We finally started seeing traffic that converted into enquiries.",
+        "quote": "Johar reworked our service pages around search intent, with better structure, internal linking and metadata. Rankings improved on several keywords that matter to us, visitors stayed longer, and the traffic finally started turning into enquiries.",
         "name": "Sophie de Vries",
         "role": "Legal Services, Rotterdam, Netherlands"
       },
@@ -298,14 +299,14 @@
         "role": "Furniture Store, Dubai, UAE"
       },
       {
-        "title": "A strategy that worked across every branch.",
-        "quote": "Managing several business locations was becoming difficult. Johar optimized each Google Business Profile, created dedicated location pages, and strengthened local search signals. More branches started appearing in the local pack, bringing in consistent enquiries from nearby customers.",
+        "title": "One strategy across every branch.",
+        "quote": "Managing several locations was getting difficult. Johar optimised each Business Profile, built dedicated location pages, and strengthened our local signals. More branches now show in the local pack, bringing steady enquiries from nearby customers.",
         "name": "Marieke Bakker",
         "role": "Dental Clinics, Utrecht, Netherlands"
       },
       {
-        "title": "One strategy instead of disconnected marketing.",
-        "quote": "Johar managed our SEO, Google Ads, and Meta Ads together, making sure every channel supported the others. We had better reporting, stronger conversion tracking, and a noticeable increase in qualified leads. It felt like having one person who understood the complete marketing picture.",
+        "title": "One strategy instead of four.",
+        "quote": "Johar ran our SEO, Google Ads and Meta Ads together so that each channel supported the others rather than competing. Better reporting, stronger conversion tracking, and a clear lift in qualified leads. It felt like one person finally had the whole picture.",
         "name": "Omar Al Kaabi",
         "role": "Real Estate, Dubai, UAE"
       }

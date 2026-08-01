@@ -82,7 +82,17 @@ hit('meta title/description');
 // ---------- hero ----------
 const hero = $('#hero');
 setText('.hero-left-text', C.hero.leftText, 'hero left text', hero);
-setText('.hero-heading', C.hero.heading, 'hero heading (br preserved)', hero);
+// The heading ships with two hard <br> forcing three lines. Dropping them is a
+// structural edit, so it only happens when content.json asks for it.
+const headingEl = hero.find('.hero-heading').first();
+if (headingEl.length && C.hero.headingOneLine) {
+  const brs = headingEl.find('br').length;
+  headingEl.find('br').remove();
+  headingEl.text(C.hero.heading);
+  hit(`hero heading → one line (${brs} <br> removed)`);
+} else {
+  setText('.hero-heading', C.hero.heading, 'hero heading (br preserved)', hero);
+}
 setText('.hero-right-text', C.hero.rightText, 'hero right text', hero);
 
 // "80+ / Projects" — two text nodes either side of a <br>. Feed it as two words
