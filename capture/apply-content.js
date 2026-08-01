@@ -46,8 +46,17 @@ function setText(sel, value, label, ctx) {
   hit(label);
 }
 function writeInto(node, value) {
-  const nodes = textNodes(node);
+  let nodes = textNodes(node);
   if (!nodes.length) { $(node).text(value); return; }
+  // Some source markup wraps bare punctuation in emphasis, e.g. <strong>.</strong>
+  // left behind by the original authoring tool. Feeding words into those slots
+  // put a random word in bold in every quote, so empty them and leave them out
+  // of the distribution. The element itself stays, so nothing structural moves.
+  const punct = nodes.filter((t) => /^[.,;:!?’'"\s-]+$/.test(t.data));
+  if (punct.length && punct.length < nodes.length) {
+    punct.forEach((t) => { t.data = ''; });
+    nodes = nodes.filter((t) => !punct.includes(t));
+  }
   if (nodes.length === 1) { nodes[0].data = value; return; }
   const lens = nodes.map((t) => t.data.trim().length);
   const total = lens.reduce((a, b) => a + b, 0) || 1;
@@ -621,6 +630,25 @@ $('img').each((i, e) => {
   if ($(e).attr('alt') === undefined) { $(e).attr('alt', ''); alts++; }
 });
 hit(`lang=en, canonical, OpenGraph card, ${alts} missing alt attributes`);
+
+// ---------- spacing override ----------
+// The testimonial card is flex with space-between and a fixed height. Its
+// content overruns that height, so the avatar row is pushed straight through
+// the card's 24px bottom padding and ends up flush against the edge
+// (measured gap below the row: 0.3px). Lift it clear.
+//
+// Kept as a separate appended block rather than an edit to the Webflow
+// stylesheet, so it is obvious and trivially reversible. Sized in vw to match
+// the fluid scale the rest of the design uses.
+const OVERRIDE_ID = 'johar-overrides';
+$(`#${OVERRIDE_ID}`).remove();
+$('head').append(
+  `<style id="${OVERRIDE_ID}">\n` +
+  `  .swiper-card-bottom { margin-bottom: 1.25vw; }\n` +
+  `  @media screen and (max-width: 767px) { .swiper-card-bottom { margin-bottom: 4vw; } }\n` +
+  `</style>`
+);
+hit('spacing override: avatar row lifted off the card edge');
 
 fs.writeFileSync(FILE, $.html());
 console.log(log.join('\n'));
