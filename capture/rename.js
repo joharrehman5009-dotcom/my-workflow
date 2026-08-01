@@ -64,8 +64,12 @@ const glyphs = LETTERS.map((ch, i) => {
     `font-size="420" fill="currentColor">${ch}</text>`;
 }).join('');
 
+// .nesh-logo-ghost is the invisible FLIP destination GhostEngine measures
+// against. It was missed here originally, which only showed up on mobile:
+// GhostEngine bails out below 768px, so the ghost is never hidden and becomes
+// the visible hero wordmark. On phones the page still read NESH.
 let logoHits = 0;
-$('.nesh-logo-preload-svg, .nesh-logo-svg').each((_, el) => {
+$('.nesh-logo-preload-svg, .nesh-logo-svg, .nesh-logo-ghost').each((_, el) => {
   $(el).empty().append(glyphs);
   logoHits++;
 });
