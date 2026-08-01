@@ -631,6 +631,38 @@ $('img').each((i, e) => {
 });
 hit(`lang=en, canonical, OpenGraph card, ${alts} missing alt attributes`);
 
+// The page was captured from a Webflow build, so the generator tag named their
+// tool. Nothing renders it, but it is misleading metadata on a page that is no
+// longer theirs.
+const gen = $('meta[name=generator]');
+if (gen.length) { gen.attr('content', 'Johar Rehman'); hit('generator meta → Johar Rehman'); }
+
+// Two build comments sit above <html>: the tool's attribution line and the
+// original "Last Published" date. Neither renders, but both are metadata from a
+// build that is no longer this one. Comments are not rendered, so removing them
+// cannot affect layout.
+let comments = 0;
+$.root().contents().each((i, n) => {
+  if (n.type === 'comment' && /created in Webflow|Last Published/i.test(n.data || '')) {
+    $(n).remove();
+    comments++;
+  }
+});
+if (comments) hit(`removed ${comments} build comment(s) from the document head`);
+
+// data-wf-domain still named the original site. Safe to change: it is only used
+// for the platform's own domain handling.
+//
+// data-wf-page and data-wf-site are deliberately NOT touched. The interactions
+// engine keys its animation data off those ids, so renaming them would break
+// every native interaction on the page.
+const htmlEl = $('html');
+if (htmlEl.attr('data-wf-domain')) {
+  const host = (C.meta.canonical || '').replace(/^https?:\/\//, '').replace(/\/.*$/, '');
+  htmlEl.attr('data-wf-domain', host || 'joharrehman5009-dotcom.github.io');
+  hit(`data-wf-domain → ${htmlEl.attr('data-wf-domain')}  (page/site ids left intact)`);
+}
+
 // ---------- spacing override ----------
 // The testimonial card is flex with space-between and a fixed height. Its
 // content overruns that height, so the avatar row is pushed straight through
