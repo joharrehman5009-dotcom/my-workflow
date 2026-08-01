@@ -59,7 +59,12 @@ function writeInto(node, value) {
       : Math.max(1, Math.round(words.length * (lens[k] / total)));
     const chunk = words.slice(i, i + share).join(' ');
     i += share;
-    t.data = (t.data.startsWith(' ') ? ' ' : '') + chunk + (t.data.endsWith(' ') ? ' ' : '');
+    // Every node except the last needs a trailing space. Copying the original
+    // node's spacing instead produced runs like "results.He" wherever the source
+    // kept its space outside the text node, next to an inline tag.
+    const lead = t.data.startsWith(' ') ? ' ' : '';
+    const trail = k === nodes.length - 1 ? (t.data.endsWith(' ') ? ' ' : '') : ' ';
+    t.data = lead + chunk + trail;
   });
 }
 function setEachEl(els, values, label) {
@@ -341,18 +346,26 @@ if (slides.length) {
     // Element kept; only the src/alt change — same swap class as the profile photo.
     const av = s.find('.client-img').first();
     if (av.length) {
-      // The avatar was derived from the author's initial, which 404s the moment
-      // a name changes. Fall back to a neutral avatar when no letter tile exists.
-      const dir = 'assets/cdn.prod.website-files.com/691d7c9f14d0280ebe2d4108/';
-      const initial = (t.name || '').trim()[0];
-      const letterFile = initial ? `avatar-${initial.toLowerCase()}.avif` : null;
-      const useLetter = letterFile && fs.existsSync(path.join(OUT, dir, letterFile));
-      av.attr('src', dir + (useLetter ? letterFile : 'avatar-placeholder.avif'));
+      // One tile per person, keyed on the name. Falls back to a neutral avatar
+      // rather than 404ing if a name is edited without adding a matching photo.
+      const slug = (t.name || '').toLowerCase().replace(/[^a-z]+/g, '-').replace(/^-|-$/g, '');
+      const own = `assets/local-logos/client-${slug}.png`;
+      const exists = slug && fs.existsSync(path.join(OUT, own));
+      av.attr('src', exists ? own
+        : 'assets/cdn.prod.website-files.com/691d7c9f14d0280ebe2d4108/avatar-placeholder.avif');
       av.attr('alt', t.name).removeAttr('srcset').removeAttr('sizes');
+      if (!exists) console.warn(`    !! no photo for "${t.name}" (expected ${own})`);
     }
-    // Element kept — text and href rewritten rather than removed.
+    // No LinkedIn on client attributions. The element stays so the layout is
+    // untouched; it carries the person's location instead of a profile link.
+    // Held a LinkedIn profile link. It is emptied rather than removed so the
+    // slide layout is unchanged, and it is NOT filled with the country, which
+    // only repeated what the role line already says one row above.
     const lk = s.find('.client-text-link').first();
-    if (lk.length) { writeInto(lk.get(0), 'linkedin.com/in/johar-rehman'); lk.attr('href', C.meta.linkedin); }
+    if (lk.length) {
+      lk.text('');
+      lk.removeAttr('href').removeAttr('target').removeAttr('rel');
+    }
   });
   hit(`testimonials: all ${slides.length} slides kept, ${C.testimonial.items.length} quotes cycled`);
 } else miss('testimonial slides');

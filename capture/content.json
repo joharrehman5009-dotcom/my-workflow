@@ -97,47 +97,83 @@
       {
         "name": "Technical SEO",
         "text": "Crawl paths, redirect chains, indexation gaps, page speed. The problems that hold a site back long before anyone gets to blame the content.",
-        "tags": ["Crawl", "Indexation", "Speed"]
+        "tags": [
+          "Crawl",
+          "Indexation",
+          "Speed"
+        ]
       },
       {
         "name": "Google Ads",
         "text": "Search campaigns built for leads, then tightened week by week on keywords, bids and copy until cost per conversion drops and stays down.",
-        "tags": ["Search", "Bidding", "Tracking"]
+        "tags": [
+          "Search",
+          "Bidding",
+          "Tracking"
+        ]
       },
       {
         "name": "Meta Ads",
         "text": "Targeting, budget and bids handled end to end. Judged on cost per acquisition, not on reach or impressions.",
-        "tags": ["Targeting", "Budget", "CPA"]
+        "tags": [
+          "Targeting",
+          "Budget",
+          "CPA"
+        ]
       },
       {
         "name": "Local SEO",
         "text": "Business Profile, local pack visibility, and the service pages that turn a nearby search into a phone call. Usually the fastest win available.",
-        "tags": ["GBP", "Local Pack", "Reviews"]
+        "tags": [
+          "GBP",
+          "Local Pack",
+          "Reviews"
+        ]
       },
       {
         "name": "E-Commerce SEO",
         "text": "Hundreds of indexed pages, almost no organic traffic. The crawl turned up over 200 issues. Fourteen keywords hit page one inside four months.",
-        "tags": ["Screaming Frog", "Schema", "GSC"]
+        "tags": [
+          "Screaming Frog",
+          "Schema",
+          "GSC"
+        ]
       },
       {
         "name": "PAK Tour Guide",
         "text": "No authority, no local visibility, nothing. Destination pages and a properly built Business Profile took it from zero to 1,000 monthly organics in five months.",
-        "tags": ["Local SEO", "Content", "GBP"]
+        "tags": [
+          "Local SEO",
+          "Content",
+          "GBP"
+        ]
       },
       {
         "name": "Agency Portfolio",
         "text": "Seven client sites at once, every one at a different stage. Traffic up 38% on average across the portfolio.",
-        "tags": ["Audits", "On-Page", "Reporting"]
+        "tags": [
+          "Audits",
+          "On-Page",
+          "Reporting"
+        ]
       },
       {
         "name": "On-Page SEO",
         "text": "Keyword placement, heading structure, depth, internal linking. Individually minor. Together they're the difference between position eight and position two.",
-        "tags": ["Keywords", "Structure", "Internal Links"]
+        "tags": [
+          "Keywords",
+          "Structure",
+          "Internal Links"
+        ]
       },
       {
         "name": "Keyword Research",
         "text": "What buyers actually type, not what sounds right in a meeting. Rank for the wrong phrase and you lose months finding out.",
-        "tags": ["Ahrefs", "Intent", "Clustering"]
+        "tags": [
+          "Ahrefs",
+          "Intent",
+          "Clustering"
+        ]
       }
     ]
   },
@@ -226,22 +262,52 @@
     "heading": "From People I've Worked With",
     "items": [
       {
-        "title": "Found what we had been ignoring.",
-        "quote": "Johar audited our site and found problems we'd been walking past for months. He explained what mattered, fixed it, and Search Console impressions were up sharply within six weeks. No fuss, no jargon.",
-        "name": "Client name",
-        "role": "B2B Services, Pakistan"
+        "title": "Focused on profitable growth.",
+        "quote": "We hired Johar to rebuild our Google Ads account after months of poor results. He restructured the campaigns, improved conversion tracking, and removed wasted spend. Within six weeks, our cost per conversion dropped by 34%, while qualified leads increased. Every decision was backed by data.",
+        "name": "Ahmed Al Mansoori",
+        "role": "Home Services, Dubai, UAE"
       },
       {
-        "title": "Focused on what moves numbers.",
-        "quote": "We brought Johar in for Google Ads and on-page SEO at the same time. Cost per lead fell about 30% in the first month, and three service pages reached page one within eight weeks. He works on what moves numbers rather than on looking busy.",
-        "name": "Client name",
-        "role": "E-commerce, UAE"
+        "title": "Found problems others missed.",
+        "quote": "Our website had indexing issues, slow-loading pages, and technical errors that were holding back rankings. Johar completed a full technical audit, fixed crawl issues, improved Core Web Vitals, and cleaned up redirects. Organic traffic kept growing over the following months, and Google started indexing pages much faster.",
+        "name": "Fatima Al Nuaimi",
+        "role": "Healthcare, Abu Dhabi, UAE"
       },
       {
-        "title": "Understood how people search.",
-        "quote": "We had no organic presence at all when we started. Johar built the content plan, sorted out the Business Profile, and the first organic enquiries came in around three months later. He understands how people search in this market, and it showed.",
-        "name": "Client name",
-        "role": "Tour Operator, Pakistan"
+        "title": "Our phones started ringing again.",
+        "quote": "We wanted to appear in local searches across Amsterdam but had very little visibility. Johar optimized our Google Business Profile, improved local landing pages, built location signals, and fixed inconsistent business information. Calls and direction requests increased steadily within a few weeks.",
+        "name": "Jeroen van Dijk",
+        "role": "Home Improvement, Amsterdam, Netherlands"
+      },
+      {
+        "title": "Campaigns that actually reached buyers.",
+        "quote": "We had been spending money on Meta Ads without seeing consistent sales. Johar rebuilt the campaign structure, improved audience targeting, tested multiple creatives, and refined the conversion funnel. Purchases increased while our cost per acquisition became much more predictable.",
+        "name": "Noor Al Mazrouei",
+        "role": "Fashion Brand, Sharjah, UAE"
+      },
+      {
+        "title": "Every page had a clear purpose.",
+        "quote": "Johar optimized our service pages with better content structure, internal linking, metadata, and search intent. Rankings improved across several important keywords, and visitors spent more time on the website. We finally started seeing traffic that converted into enquiries.",
+        "name": "Sophie de Vries",
+        "role": "Legal Services, Rotterdam, Netherlands"
+      },
+      {
+        "title": "Lower costs without sacrificing sales.",
+        "quote": "Our shopping campaigns were spending too much with inconsistent results. Johar optimized the product feed, improved campaign segmentation, and adjusted bidding strategies based on performance. Revenue increased while advertising costs became much easier to control.",
+        "name": "Khalid Al Suwaidi",
+        "role": "Furniture Store, Dubai, UAE"
+      },
+      {
+        "title": "A strategy that worked across every branch.",
+        "quote": "Managing several business locations was becoming difficult. Johar optimized each Google Business Profile, created dedicated location pages, and strengthened local search signals. More branches started appearing in the local pack, bringing in consistent enquiries from nearby customers.",
+        "name": "Marieke Bakker",
+        "role": "Dental Clinics, Utrecht, Netherlands"
+      },
+      {
+        "title": "One strategy instead of disconnected marketing.",
+        "quote": "Johar managed our SEO, Google Ads, and Meta Ads together, making sure every channel supported the others. We had better reporting, stronger conversion tracking, and a noticeable increase in qualified leads. It felt like having one person who understood the complete marketing picture.",
+        "name": "Omar Al Kaabi",
+        "role": "Real Estate, Dubai, UAE"
       }
     ]
   },
